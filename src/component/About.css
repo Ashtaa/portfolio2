@@ -1,0 +1,94 @@
+.about-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  padding: 20px;
+  gap: 2rem; /* Reduce gap for smaller screens */
+  height: auto; /* Allow height to adjust based on content */
+  align-items: center; /* Center items horizontally */
+}
+
+.table {
+  width: 100%; /* Use full width */
+  max-width: 600px; /* Limit width on larger screens */
+  margin: 0;/* Remove default margin */
+  border-collapse: collapse; /* Optional: for cleaner table */
+}
+
+/* Center the table within its parent */
+.table-container {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Full width */
+}
+
+/* Existing styles remain unchanged... */
+
+/* Existing styles remain unchanged... */
+
+.about-content.light {
+  background-color: #f0f0f0;
+}
+
+.about-content.dark {
+  background-color: #222;
+}
+
+
+
+td {
+  padding: 10px; /* Reduce padding for smaller screens */
+  text-align: left; /* Align text in table cells */
+}
+
+
+
+.td {
+  font-size: 18px; /* Slightly smaller font size */
+  font-weight: 700;
+}
+@media (max-width: 768px){
+  .tab{
+    margin-left: 100px;
+  }
+  .h1 {
+    position: relative;
+    margin-left: 100px; /* Centers the text horizontally */
+}
+}
+/* Media query for tablets and laptops */
+@media (min-width: 768px) {
+
+  .about-content {
+    flex-direction: row; /* Change to row on larger screens */
+    gap: 3rem; /* Maintain appropriate gap */
+    height: 30rem; /* Maintain specified height */
+    align-items: flex-start; /* Align items to the start on larger screens */
+  }
+
+  .table {
+    margin: 0; /* Ensure no margin on larger screens */
+  }
+
+  td {
+    padding: 15px; /* Adjust padding for larger screens */
+    
+  }
+  .tab{
+    margin-left: 100px;
+  }
+  .h1 {
+    position: relative;
+    margin-left: 100px; /* Centers the text horizontally */
+}
+}
+
+/* Media query for large laptops and desktops */
+@media (min-width: 1024px) {
+  .about-content {
+    gap: 5rem; /* Increase gap for larger screens */
+  }
+
+  .td {
+    font-size: 20px; /* Increase font size for better readability */
+  }
+}

@@ -1,0 +1,109 @@
+App.css
+
+.home-content.light {
+  background-color: #f0f0f0;
+}
+
+.home-content.dark {
+  background-color: #222;
+}
+
+.p.light {
+  color: red;
+}
+
+
+/* Base styles for the list */
+.ul {
+  display: flex;              /* Use flexbox for layout */
+  flex-direction: row;       /* Default to row for larger screens */
+  list-style-type: none;     /* Remove default list styling */
+  padding: 0;                /* Remove default padding */
+  margin: 0;                 /* Remove default margin */
+}
+
+/* Styles for list items */
+.ul li {
+  margin-right: 15px;        /* Space between items */
+  font-size: 30px;           /* Default font size */
+}
+
+
+
+/* Image styles */
+img {
+  background-color: black;
+  border-radius: 50%;
+  width: 400px;              /* Default size */
+  height: 400px;             /* Default size */
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+img:hover {
+  transform: scale(1.1);     /* Zoom in on hover */
+}
+
+/* Button styles */
+.btn {
+  border-radius: 10px;
+  height: 50px;
+  width: 100px;
+  margin-left: 5px;
+}
+
+.btn.light {
+  background-color: #222;
+  color: white;
+}
+
+/* Footer styles */
+footer {
+  padding: 39px;
+}
+
+/* Media Queries */
+@media (min-width: 1440px) {
+  .home-content {
+    margin-top: 50px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10rem;              /* Space between elements */
+  }
+
+  .ul {
+      flex-direction: column;    /* Arrange items in a row for larger screens */
+      margin-left: 100px;     /* Margin for left alignment */
+  }
+
+  .ul li {
+      font-size: 50px;        /* Increase size for larger screens */
+      margin-bottom: 0;       /* No bottom margin in row layout */
+  }
+}
+
+@media (max-width: 450px) {
+  .fa{
+    display: none;
+  }
+  .home-content {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center;     /* Center items horizontally */
+      text-align: center;      /* Center text */
+  }
+
+  .ul {
+      display: none;           /* Hide the list on mobile */
+  }
+  
+  img {
+      width: 100%;            /* Responsive image width */
+      height: auto;           /* Maintain aspect ratio */
+  }
+
+  .btn {
+      width: 90%;             /* Full width buttons on small screens */
+      margin: 10px 0;         /* Margin for spacing */
+  }
+}

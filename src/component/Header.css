@@ -1,0 +1,33 @@
+.header {
+  padding: 1rem;
+  background-color: #f8f9fa; /* Light theme */
+  text-align: center; /* Center the nav */
+}
+
+.header.dark {
+  background-color: #343a40; /* Dark theme */
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center items */
+  gap: 1rem;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a, 
+nav ul li .toggle-button {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  cursor: pointer; /* Change cursor to pointer */
+}

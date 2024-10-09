@@ -1,0 +1,18 @@
+/* In your App.css */
+html {
+  scroll-behavior: smooth;
+}
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.App.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.App.dark {
+  background-color: #333;
+  color: #fff;
+}
