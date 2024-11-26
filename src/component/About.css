@@ -1,29 +1,25 @@
 .about-content {
   display: flex;
-  flex-direction: column; /* Stack items vertically on small screens */
+  flex-direction: column; 
   padding: 20px;
-  gap: 2rem; /* Reduce gap for smaller screens */
-  height: auto; /* Allow height to adjust based on content */
-  align-items: center; /* Center items horizontally */
+  gap: 2rem; 
+  
+  height: auto; 
+  align-items: center;
 }
 
 .table {
-  width: 100%; /* Use full width */
-  max-width: 600px; /* Limit width on larger screens */
-  margin: 0;/* Remove default margin */
-  border-collapse: collapse; /* Optional: for cleaner table */
+  width: 100%;
+  max-width: 600px; 
+  margin: 0;
+  border-collapse: collapse;
 }
 
-/* Center the table within its parent */
 .table-container {
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center horizontally */
-  width: 100%; /* Full width */
+  display: flex; 
+  justify-content: center; 
+  width: 100%; 
 }
-
-/* Existing styles remain unchanged... */
-
-/* Existing styles remain unchanged... */
 
 .about-content.light {
   background-color: #f0f0f0;
@@ -36,14 +32,14 @@
 
 
 td {
-  padding: 10px; /* Reduce padding for smaller screens */
-  text-align: left; /* Align text in table cells */
+  padding: 10px; 
+  text-align: left; 
 }
 
 
 
 .td {
-  font-size: 18px; /* Slightly smaller font size */
+  font-size: 18px; 
   font-weight: 700;
 }
 @media (max-width: 768px){
@@ -52,25 +48,25 @@ td {
   }
   .h1 {
     position: relative;
-    margin-left: 100px; /* Centers the text horizontally */
+    margin-left: 100px; 
 }
 }
-/* Media query for tablets and laptops */
+
 @media (min-width: 768px) {
 
   .about-content {
-    flex-direction: row; /* Change to row on larger screens */
-    gap: 3rem; /* Maintain appropriate gap */
-    height: 30rem; /* Maintain specified height */
-    align-items: flex-start; /* Align items to the start on larger screens */
+    flex-direction: row;
+    gap: 3rem; 
+    height: 30rem; 
+    align-items: flex-start; 
   }
 
   .table {
-    margin: 0; /* Ensure no margin on larger screens */
+    margin: 0; 
   }
 
   td {
-    padding: 15px; /* Adjust padding for larger screens */
+    padding: 15px;
     
   }
   .tab{
@@ -78,17 +74,16 @@ td {
   }
   .h1 {
     position: relative;
-    margin-left: 100px; /* Centers the text horizontally */
+    margin-left: 100px; 
 }
 }
 
-/* Media query for large laptops and desktops */
 @media (min-width: 1024px) {
   .about-content {
-    gap: 5rem; /* Increase gap for larger screens */
+    gap: 5rem; 
   }
 
   .td {
-    font-size: 20px; /* Increase font size for better readability */
+    font-size: 20px; 
   }
 }

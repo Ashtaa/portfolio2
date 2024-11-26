@@ -2,22 +2,22 @@ import React from "react";
 import './Home.css';
 import img from './../img/me.jpg';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaTelegram } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom'; 
 
 const Home = ({ theme }) => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
-  // Function to handle CV download
+ 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Ashenafi sahele.pdf"; // Adjust the path to your CV file
-    link.download = "Ashenafi sahele.pdf"; // Change the file name as needed
+    link.href = "/Ashenafi sahele.pdf"; 
+    link.download = "Ashenafi sahele.pdf"; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
   const navigateToSocialMedia = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer'); // Open in a new tab
+    window.open(url, '_blank', 'noopener,noreferrer'); 
   };
   return (
     <>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaHome, FaInfoCircle, FaEnvelope, FaSun, FaMoon } from 'react-icons/fa';
-import './Header.css'; // Ensure you have relevant styles for your header
+import './Header.css'; 
 
 const Header = ({ theme, toggleTheme }) => {
   return (

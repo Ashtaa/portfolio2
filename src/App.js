@@ -26,9 +26,9 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <Routes>
-        <Route path="/" element={<Home />} />
+      <Header theme={theme} toggleTheme={toggleTheme}  />
+      <Routes >
+        <Route path="/" index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="contact" element={<Contact />} />
       </Routes>
