@@ -43,9 +43,7 @@ td {
   font-weight: 700;
 }
 @media (max-width: 768px){
-  .tab{
-    margin-left: 100px;
-  }
+ 
   .h1 {
     position: relative;
     margin-left: 100px; 

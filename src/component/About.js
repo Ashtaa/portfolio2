@@ -19,7 +19,7 @@ const About = ({ theme }) => {
             </tr>
             <tr>
               <td className="td">Age:</td>
-              <td className="td1">19</td>
+              <td className="td1">20</td>
             </tr>
             <tr>
               <td className="td">Certificate:</td>
@@ -29,7 +29,7 @@ const About = ({ theme }) => {
         </table>
       </div>
       <div>
-        <h1>About</h1>
+        <h1 className="h1">About</h1>
         <p>
           My name is Ashenafi Sahele and I am a frontend developer based in Addis Ababa, Ethiopia. I am passionate about building high-quality, user-friendly web applications that deliver great experiences.
           <br /><br />

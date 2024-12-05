@@ -10,12 +10,13 @@ const Home = ({ theme }) => {
  
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Ashenafi sahele.pdf"; 
-    link.download = "Ashenafi sahele.pdf"; 
+    link.href = `${process.env.PUBLIC_URL}/Ashenafi sahele.pdf`; // PUBLIC_URL ensures proper path resolution
+    link.download = "Ashenafi sahele.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+  
   const navigateToSocialMedia = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer'); 
   };
@@ -34,7 +35,7 @@ const Home = ({ theme }) => {
           </ul>
         </div>
         <div className={`img ${theme}`}>
-          <img src={img} alt="Me" />
+          <img src={img} alt="Me" className="me" />
         </div>
         <div>
           <h1>Hello, my name is</h1>

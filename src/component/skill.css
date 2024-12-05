@@ -1,0 +1,122 @@
+/* Light and Dark Theme Variables */
+:root {
+  --text-color: #000000;
+  --bar-background-color: #e0e0e0;
+  --bar-fill-color: linear-gradient(90deg, #007acc, #00c6ff);
+  --circle-background-color: #f0f0f0;
+  --circle-fill-color: #00c6ff;
+}
+
+.dark {
+  --text-color: #f5f5f5;
+  --bar-background-color: #3a3a3a;
+  --bar-fill-color: linear-gradient(90deg, #ff8c00, #ff4500);
+  --circle-background-color: #3a3a3a;
+  --circle-fill-color: #ff4500;
+}
+@media (max-width: 768px) {
+  .skills-container{
+    display: flex;
+    flex-direction: column;
+    
+  }
+}
+@media (min-width: 1440px) {
+  .skills-container{
+    display: grid;
+  }
+}
+/* Skills Container */
+.skills-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin-top: 50px;
+  
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between the columns */
+}
+
+/* Skill Item */
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: bold; /* Make the skill names bold */
+  margin-bottom: 10px; /* Add spacing after the skill name */
+  color: var(--text-color);
+  text-align: left; /* Align skill name to the left */
+}
+
+/* Horizontal Skill Bar Container */
+.skill-bar {
+  background-color: var(--bar-background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  position: relative;
+  margin-bottom: 20px; /* Add spacing between bars */
+}
+
+/* Animated Skill Progress Bar */
+.skill-progress {
+  height: 100%;
+  background: var(--bar-fill-color);
+  width: 0%; /* Start at 0% for animation */
+  transition: width 1.5s ease-in-out; /* Smooth width animation */
+}
+
+/* Skill Level Text */
+.skill-level {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: right;
+}
+
+/* Circle Progress Bar Container */
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px; /* Add spacing between circle progress bars */
+  padding-bottom: 50px;
+}
+h3{
+    text-align: center;
+}
+.circle-bar {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--circle-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-skill-name{
+  margin-right: 50px;
+ 
+}
+.circle-bar svg {
+  transform: rotate(-90deg); /* Rotate to start the stroke from top */
+}
+
+.circle-bar circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-dasharray: 440; /* Circumference of the circle (2 * Math.PI * radius) */
+  stroke-dashoffset: 440; /* Initially offset the stroke to hide it */
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+.circle-text {
+  position: absolute;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.circle-bar.active circle {
+  stroke-dashoffset: calc(440 - (440 * var(--skill-level) / 100)); /* Animate to the appropriate value */
+}
