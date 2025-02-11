@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Router,Routes } from "react-router-dom";
 import Home from "./component/Home";
 import About from "./component/About";
 import Header from "./component/Header";
@@ -9,6 +9,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Skills from "./component/Skills";
 import Projects from "./component/Projects";
+import Footer from "./component/Footer";
+
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -22,20 +24,24 @@ function App() {
   };
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 1000 });
     AOS.refresh();
-  }, []);
+  }, [theme]);
+  
 
   return (
     <div className={`App ${theme}`}>
+      
+      
       <Header  theme={theme} toggleTheme={toggleTheme}  />
       <Routes>
-        <Route path="/" index element={<Home />} />
+        <Route path="/" index element={<Home theme={theme} />} />
         <Route path="/about" element={<About />} />
         <Route path="/skill"  element={<Skills />} />
-        <Route path="/project"   element={<Projects />} />
+        <Route path="/project"   element={<Projects theme={theme}/>} />
         <Route path="contact" element={<Contact />} />
-      </Routes>
+        </Routes>
+     <Footer theme={theme} />
     </div>
   );
 }

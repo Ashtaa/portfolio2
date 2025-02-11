@@ -6,17 +6,22 @@
     object-fit: cover;
     transition: transform 0.3s ease; /* Smooth transition */}
 .img-container{
-    background-color: rgb(97, 97, 97);
+   
     height: 500px;
        
-    border: 2px solid black;
-    border-radius: 15px;margin-top: 20px;
+    box-shadow:  5px 10px 20px 0 rgba(0, 255, 242, 0.8);
+    border-radius: 15px;
+    margin-top: 20px;
     padding: 20px;
     
 }
+
 .h3{
     font-style: italic;
     font-weight: 700;
+    color: black;
+}
+.projeect-p.light{
     color: black;
 }
 @media (max-width: 768px){
@@ -45,6 +50,3 @@
         display: flex;
     }
    }
-.project-container.light{
-    background-color: aqua;
-}

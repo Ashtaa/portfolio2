@@ -6,13 +6,16 @@ App.css
 }
 
 .home-content.dark {
-  background-color: #222;
+  background-color: #000000;
 }
 
 .p.light {
   color: red;
 }
-
+.home-p.light{
+  color: black;
+  font-weight: bolder;
+}
 
 /* Base styles for the list */
 .ul {
@@ -32,15 +35,7 @@ App.css
 
 
 /* Image styles */
-.me {
-  background-color: black;
-  border-radius: 50%;
-  width: 300px;              /* Default size */
-  height: 300px;             /* Default size */
-  object-fit: cover;
-  transition: transform 0.3s ease; /* Smooth transition */
- 
-}
+
 
 img:hover {
   transform: scale(1.1);     /* Zoom in on hover */
@@ -48,24 +43,52 @@ img:hover {
 
 /* Button styles */
 .btn {
-  border-radius: 10px;
+  border-radius: 20px;
   height: 50px;
-  width: 100px;
+  width: 200px;
   margin-left: 5px;
+  border: 2px solid aqua;
+  background-color: black;
+  margin-top: 50px;
 }
 
 .btn.light {
-  background-color: #222;
-  color: white;
+  
+  color: rgb(0, 0, 0);
+  background-color: #f0f0f0;
 }
 
 /* Footer styles */
 footer {
   padding: 39px;
+  text-align: center;
 }
 
 /* Media Queries */
 @media (min-width: 1440px) {
+  .under-img{
+    
+  }
+  
+  .under-img h1{
+    font-size: 70px;
+  }
+  .under-img h1 span{
+    color: aqua;
+  }
+  .me.light{
+    background-color: #f0f0f0;
+  }
+  .me{
+    background-color: black;
+   
+    width: 500px;              /* Default size */
+    height: 500px;             /* Default size */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 10px 10px 30px 10px rgba(0, 217, 255, 0.7);
+    border-radius: 50%;
+  }
   .home-content {
     margin-top: 50px;
       padding: 20px;
@@ -84,8 +107,35 @@ footer {
       margin-bottom: 0;       /* No bottom margin in row layout */
   }
 }
+@media (max-width: 768px){
+  .under-img h1 span{
+    color: aqua;
+  }
+  .me {
+    background-color: black;
+    border-radius: 50%;
+    width: 300px;              /* Default size */
+    height: 300px;             /* Default size */
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition */
+    
+    box-shadow: 0px 10px 20px 10px rgba(0, 225, 255, 0.432);
 
+  }
+  .img{
+    display: flex;
+    justify-content: center;
+ 
+}
+.under-img{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
 @media (max-width: 450px) {
+  
   .fa{
     display: none;
   }

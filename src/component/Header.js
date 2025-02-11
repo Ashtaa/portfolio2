@@ -31,7 +31,7 @@ const Header = ({ theme, toggleTheme }) => {
       <nav>
         <ul className={isMenuOpen ? "active" : ""}>
           <li>
-            <Link to="/" onClick={toggleMenu}>
+            <Link to="/"  onClick={toggleMenu}>
               <FaHome /> Home
             </Link>
           </li>
